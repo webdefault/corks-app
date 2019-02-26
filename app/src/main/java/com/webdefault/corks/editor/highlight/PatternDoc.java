@@ -4,8 +4,8 @@ import java.util.regex.Pattern;
 
 public class PatternDoc
 {
-	public String match;
-	public String scope;
-	public Pattern pattern = null;
-	public int color;
+    public String match;
+    public String scope;
+    public Pattern pattern = null;
+    public int color;
 }

@@ -10,7 +10,7 @@ class SQLite(databasePath: String) {
         db = SQLiteDatabase.openOrCreateDatabase(databasePath, null)
         dbInited = true;
         /*db = SQLiteDatabase.openDatabase( databasePath, null,
-				SQLiteDatabase.NO_LOCALIZED_COLLATORS );*/
+                SQLiteDatabase.NO_LOCALIZED_COLLATORS );*/
     }
 
     fun beginTransaction() {

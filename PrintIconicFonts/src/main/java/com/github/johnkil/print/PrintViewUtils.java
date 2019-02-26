@@ -75,18 +75,18 @@ class PrintViewUtils {
                                    ColorStateList iconColor, float iconSize, boolean inEditMode) {
         PrintDrawable.Builder iconBuilder = new PrintDrawable.Builder(context);
 
-		iconBuilder.iconText(iconText);
-		if( iconCode != 0 ) iconBuilder.iconCode(iconCode);
-		
-		if (!inEditMode && iconFontPath != null) {
-			iconBuilder.iconFont(TypefaceManager.load(context.getAssets(), iconFontPath));
-		}
-	
-		iconBuilder.iconColor(iconColor);
-		
-		iconBuilder.iconSize(TypedValue.COMPLEX_UNIT_PX, iconSize);
-	
-		iconBuilder.inEditMode(inEditMode);
+        iconBuilder.iconText(iconText);
+        if( iconCode != 0 ) iconBuilder.iconCode(iconCode);
+        
+        if (!inEditMode && iconFontPath != null) {
+            iconBuilder.iconFont(TypefaceManager.load(context.getAssets(), iconFontPath));
+        }
+    
+        iconBuilder.iconColor(iconColor);
+        
+        iconBuilder.iconSize(TypedValue.COMPLEX_UNIT_PX, iconSize);
+    
+        iconBuilder.inEditMode(inEditMode);
     
         Log.v("PrintViewUtils", "Conteudo: " + iconText + ", " + iconFontPath + ", " + 
                 iconColor + ", " + iconSize + ", " + inEditMode );

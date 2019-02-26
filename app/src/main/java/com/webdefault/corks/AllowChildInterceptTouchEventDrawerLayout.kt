@@ -15,50 +15,50 @@ import android.view.View
 class AllowChildInterceptTouchEventDrawerLayout : DrawerLayout
 {
 
-	private var mInterceptTouchEventChildId:Int = 0
+    private var mInterceptTouchEventChildId:Int = 0
 
-	fun setInterceptTouchEventChildId(id:Int)
-	{
-		this.mInterceptTouchEventChildId = id
-	}
+    fun setInterceptTouchEventChildId(id:Int)
+    {
+        this.mInterceptTouchEventChildId = id
+    }
 
-	constructor(context:Context) : super(context)
-	{
-	}
+    constructor(context:Context) : super(context)
+    {
+    }
 
-	constructor(context:Context, attrs:AttributeSet) : super(context, attrs)
-	{
-	}
+    constructor(context:Context, attrs:AttributeSet) : super(context, attrs)
+    {
+    }
 
-	override fun onInterceptTouchEvent(ev:MotionEvent):Boolean
-	{
-		if(mInterceptTouchEventChildId > 0 && isDrawerOpen(Gravity.LEFT))
-		{
-			val scroll = findViewById<View>(mInterceptTouchEventChildId)
-			if(scroll != null)
-			{
-				val rect = Rect()
-				scroll.getHitRect(rect)
-				if(rect.contains(ev.x.toInt(), ev.y.toInt()))
-				{
-					return false
-				}
-			}
-		}
+    override fun onInterceptTouchEvent(ev:MotionEvent):Boolean
+    {
+        if(mInterceptTouchEventChildId > 0 && isDrawerOpen(Gravity.LEFT))
+        {
+            val scroll = findViewById<View>(mInterceptTouchEventChildId)
+            if(scroll != null)
+            {
+                val rect = Rect()
+                scroll.getHitRect(rect)
+                if(rect.contains(ev.x.toInt(), ev.y.toInt()))
+                {
+                    return false
+                }
+            }
+        }
 
-		try
-		{
-			return super.onInterceptTouchEvent(ev)
-		}
-		catch(e:Exception)
-		{
-			e.printStackTrace()
-		}
-		finally
-		{
-			//return false;
-		}
+        try
+        {
+            return super.onInterceptTouchEvent(ev)
+        }
+        catch(e:Exception)
+        {
+            e.printStackTrace()
+        }
+        finally
+        {
+            //return false;
+        }
 
-		return false
-	}
+        return false
+    }
 }

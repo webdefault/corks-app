@@ -9,22 +9,22 @@ import com.webdefault.corks.R;
 
 public class TermHolder extends RecyclerView.ViewHolder
 {
-	public int type;
-	public TextView title;
-	public PrintImageButton closeBtn;
-	public int position;
+    public int type;
+    public TextView title;
+    public PrintImageButton closeBtn;
+    public int position;
 
-	public TermHolder( View itemView, int type, View.OnClickListener listener )
-	{
-		super( itemView );
+    public TermHolder( View itemView, int type, View.OnClickListener listener )
+    {
+        super( itemView );
 
-		this.type = type;
-		title = (TextView) itemView.findViewById( R.id.name );
-		closeBtn = (PrintImageButton) itemView.findViewById( R.id.close_btn );
-		closeBtn.setOnClickListener( listener );
-		
-		
-		//moreButton = (ImageButton) itemView.findViewById(R.id.main_line_more);
-		//deleteButton = (ImageButton) itemView.findViewById(R.id.main_line_delete);
-	}
+        this.type = type;
+        title = (TextView) itemView.findViewById( R.id.name );
+        closeBtn = (PrintImageButton) itemView.findViewById( R.id.close_btn );
+        closeBtn.setOnClickListener( listener );
+        
+        
+        //moreButton = (ImageButton) itemView.findViewById(R.id.main_line_more);
+        //deleteButton = (ImageButton) itemView.findViewById(R.id.main_line_delete);
+    }
 }

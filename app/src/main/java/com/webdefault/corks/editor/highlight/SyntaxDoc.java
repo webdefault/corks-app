@@ -10,10 +10,10 @@ import java.util.Map;
 
 public class SyntaxDoc
 {
-	public String fileName;
-	public String name;
-	public String[] extensions;
-	public String firstLine = null;
-	
-	public List<PatternDoc> patterns;
+    public String fileName;
+    public String name;
+    public String[] extensions;
+    public String firstLine = null;
+    
+    public List<PatternDoc> patterns;
 }

@@ -9,6 +9,6 @@ import com.webdefault.corks.editor.ToolsSelector;
 
 public interface Tool<View>
 {
-	void init( Editor editor, ToolsSelector tools );
-	boolean canClose();
+    void init( Editor editor, ToolsSelector tools );
+    boolean canClose();
 }

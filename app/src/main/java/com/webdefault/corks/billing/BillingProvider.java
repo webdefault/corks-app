@@ -19,7 +19,7 @@ package com.webdefault.corks.billing;
  * An interface that provides an access to BillingLibrary methods
  */
 public interface BillingProvider {
-	BillingManager getBillingManager();
-	boolean hasSubscriptionPurchased();
+    BillingManager getBillingManager();
+    boolean hasSubscriptionPurchased();
 }
 

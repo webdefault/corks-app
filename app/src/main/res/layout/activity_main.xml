@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.webdefault.corks.AllowChildInterceptTouchEventDrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/backgroundApp"
+	android:fitsSystemWindows="true"
+	tools:openDrawer="start">
+
+	<include
+		layout="@layout/app_bar_main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<LinearLayout
+		android:id="@+id/drawer_container"
+		android:layout_width="240dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="@color/drawerBackground"
+		android:clickable="true"
+		android:orientation="vertical">
+
+		<android.support.design.widget.AppBarLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/AppTheme.AppBarOverlay">
+
+			<android.support.v7.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:background="@color/toolbarBackground"
+				app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+		</android.support.design.widget.AppBarLayout>
+
+		<LinearLayout
+			android:id="@+id/nav_view"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:orientation="vertical">
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="150dp"
+			android:visibility="gone">
+
+			<Button
+				android:id="@+id/open_folder"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:text="Open folder"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<com.webdefault.corks.editor.ToolsSelector
+		android:id="@+id/tools_selector"
+		android:layout_width="150dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="end"
+		android:background="@color/toolsBackground"
+		android:clickable="true"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:orientation="vertical">
+
+			<com.github.johnkil.print.PrintButton
+				android:id="@+id/save_btn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:contentDescription="Save"
+				android:drawablePadding="15dp"
+				android:gravity="left|center_vertical"
+				android:padding="15dp"
+				android:text="Save"
+				android:textColor="@color/fileText"
+				app:print_iconFont="fonts/material-icon-font.ttf"
+				app:print_iconSize="26dp"
+				app:print_iconTextStart="@string/ic_save"/>
+
+			<com.github.johnkil.print.PrintButton
+				android:id="@+id/find_btn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:contentDescription="Find"
+				android:drawablePadding="15dp"
+				android:gravity="left|center_vertical"
+				android:padding="15dp"
+				android:text="Find"
+				android:textColor="@color/fileText"
+				app:print_iconFont="fonts/material-icon-font.ttf"
+				app:print_iconSize="26dp"
+				app:print_iconTextStart="@string/ic_search"/>
+
+
+			<com.github.johnkil.print.PrintButton
+				android:id="@+id/undo_btn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:contentDescription="Undo"
+				android:drawablePadding="15dp"
+				android:gravity="left|center_vertical"
+				android:padding="15dp"
+				android:text="Undo"
+				android:textColor="@color/fileText"
+				app:print_iconFont="fonts/material-icon-font.ttf"
+				app:print_iconSize="26dp"
+				app:print_iconTextStart="@string/ic_history"/>
+			
+			<com.github.johnkil.print.PrintButton
+				android:id="@+id/buy_btn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="?android:attr/selectableItemBackground"
+				android:contentDescription="Undo"
+				android:drawablePadding="15dp"
+				android:gravity="left|center_vertical"
+				android:padding="15dp"
+				android:textColor="@color/fileText"
+				app:print_iconFont="fonts/material-icon-font.ttf"
+				app:print_iconSize="26dp"
+				app:print_iconTextStart="@string/ic_shopping_cart"
+				android:text="Subscribe"
+				android:visibility="gone"/>
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#555"/>
+
+		<TextView
+			android:id="@+id/about_file"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:lines="6"
+			android:maxLines="10"
+			android:paddingBottom="10dp"
+			android:paddingLeft="10dp"
+			android:paddingTop="10dp"
+			android:textColor="#eee"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#555"/>
+
+		<com.github.johnkil.print.PrintButton
+			android:id="@+id/syntax_btn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#30000000"
+			android:contentDescription="Syntax"
+			android:drawablePadding="5dp"
+			android:gravity="left|center_vertical"
+			android:minHeight="0dp"
+			android:paddingBottom="12dp"
+			android:paddingLeft="8dp"
+			android:paddingTop="12dp"
+			android:text="Text"
+			android:textColor="@color/syntaxSelector"
+			android:textStyle="italic|normal"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="20dp"
+			app:print_iconTextStart="@string/ic_insert_drive_file"/>
+	</com.webdefault.corks.editor.ToolsSelector>
+
+	<!--android.support.design.widget.NavigationView
+		android:id="@+id/nav_view"
+		android:layout_width=<"wrap_content"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:fitsSystemWindows="true"
+		app:headerLayout="@layout/nav_header_main"
+		app:menu="@menu/activity_main_drawer"/-->
+
+</com.webdefault.corks.AllowChildInterceptTouchEventDrawerLayout>

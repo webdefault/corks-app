@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp">
+	<EditText
+		android:id="@+id/input"
+		style="@style/DialogEditText"
+		android:layout_marginTop="15dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18dp"
+		android:singleLine="true"
+		android:selectAllOnFocus="true"
+		android:hint="" />
+</LinearLayout>

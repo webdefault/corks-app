@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp">
+	<CheckBox
+		android:layout_marginTop="10dp"
+		android:id="@+id/match_case"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ellipsize="marquee"
+		android:gravity="center_vertical"
+		android:paddingEnd="7dip"
+		android:paddingStart="12dip"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Match case"
+		android:theme="@style/DialogAlertContent"
+		/>
+
+	<CheckBox
+		android:layout_marginTop="10dp"
+		android:id="@+id/using_regex"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ellipsize="marquee"
+		android:gravity="center_vertical"
+		android:paddingEnd="7dip"
+		android:paddingStart="12dip"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Using regex"
+		android:theme="@style/DialogAlertContent"
+		/>
+
+	<CheckBox
+		android:layout_marginTop="10dp"
+		android:id="@+id/show_replace"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:ellipsize="marquee"
+		android:gravity="center_vertical"
+		android:paddingEnd="7dip"
+		android:paddingStart="12dip"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="Replace"
+		android:theme="@style/DialogAlertContent"
+		/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<resources>
+
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="android:alertDialogTheme">@style/DialogAlert</item>
+		<item name="android:dialogTheme">@style/DialogAlert</item>
+
+		<item name="textColorAlertDialogListItem">#fff</item>
+
+		<item name="android:textColorHint">@color/hintColor</item>
+	</style>
+
+	<style name="SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="android:windowBackground">@drawable/splash_screen_background</item>
+	</style>
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+
+
+	<style name="DialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+		<item name="android:textColor">@color/colorAccent</item>
+	</style>
+	
+	<style name="DialogEditText">
+		<item name="android:textColorHint">@color/dialogHint</item>
+		<item name="android:textColor">#fff</item>
+	</style>
+	
+	<style name="DialogAlert" parent="@android:style/Theme.Material.Dialog.Alert">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		
+		<item name="android:buttonBarNegativeButtonStyle">@style/DialogButton</item>
+		<item name="android:buttonBarPositiveButtonStyle">@style/DialogButton</item>
+	</style>
+
+	<style name="DialogAlertContent" parent="@android:style/Theme.Material.Dialog.Alert">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="android:textSize">16dp</item>
+
+		<item name="android:buttonBarNegativeButtonStyle">@style/DialogButton</item>
+		<item name="android:buttonBarPositiveButtonStyle">@style/DialogButton</item>
+	</style>
+
+	<style name="TreeNodeStyleCustom">
+		<item name="android:paddingLeft">15dp</item>
+		<!--<item name="android:showDividers">middle</item>-->
+		<!--<item name="android:divider">@android:drawable/divider_horizontal_bright</item>-->
+	</style>
+
+	<style name="DrawerItemTheme">
+		<item name="colorControlHighlight">@color/drawerText</item>
+	</style>
+	
+	<style name="DrawerItemStyle">
+		<item name="android:theme">@style/DrawerItemTheme</item>
+		<item name="android:background">?attr/selectableItemBackground</item>
+	</style>
+</resources>

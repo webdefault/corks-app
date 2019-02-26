@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.webdefault.corks.editor.tool.FindTool
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="100dp"
+	android:background="@color/toolBackground"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/close_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:background="?android:attr/selectableItemBackground"
+			app:print_iconColor="@color/fileText"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="26dp"
+			app:print_iconText="@string/ic_close"/>
+
+		<EditText
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:id="@+id/find_field"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:selectAllOnFocus="true"
+			android:inputType="text|textEmailAddress"
+			android:hint="Find"
+			android:textColor="@color/fileText"/>
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/find_prev_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:background="?android:attr/selectableItemBackground"
+			app:print_iconColor="@color/fileText"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="26dp"
+			app:print_iconText="@string/ic_keyboard_arrow_up"/>
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/find_next_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:background="?android:attr/selectableItemBackground"
+			app:print_iconColor="@color/fileText"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="26dp"
+			app:print_iconText="@string/ic_keyboard_arrow_down"/>
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/options_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:background="?android:attr/selectableItemBackground"
+			app:print_iconColor="@color/fileText"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="26dp"
+			app:print_iconText="@string/ic_more_vert"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/replace_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone">
+
+		<EditText
+			android:id="@+id/replace_field"
+			android:layout_width="0dp"
+			android:layout_height="50dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:hint="Replace"
+			android:inputType="text|textEmailAddress"
+			android:paddingLeft="40dp"
+			android:textColor="@color/fileText"/>
+
+		<ImageButton
+			android:id="@+id/replace_one_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:background="?android:attr/selectableItemBackground"
+			android:scaleType="center"
+			android:src="@drawable/replace_one"/>
+
+		<ImageButton
+			android:id="@+id/replace_all_btn"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:layout_marginRight="40dp"
+			android:background="?android:attr/selectableItemBackground"
+			android:scaleType="center"
+			android:src="@drawable/replace_all"/>
+
+	</LinearLayout>
+</com.webdefault.corks.editor.tool.FindTool>

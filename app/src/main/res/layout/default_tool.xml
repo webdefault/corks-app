@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.webdefault.corks.editor.tool.KeyboardTool
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="100dp"
+	android:background="@color/toolBackground"
+	android:orientation="horizontal">
+
+	<Button
+		android:id="@+id/control_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Ctrl"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="Ctrl"
+		android:textColor="@drawable/textcolor_btn" />
+
+	<Button
+		android:id="@+id/tab_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Tab"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="Tab"
+		android:textColor="@color/fileText" />
+
+	<com.github.johnkil.print.PrintImageButton
+		android:id="@+id/cursor_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Save with encoding"
+		android:drawablePadding="15dp"
+		android:gravity="left|center_vertical"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		app:print_iconColor="@drawable/textcolor_btn"
+		app:print_iconFont="fonts/material-icon-font.ttf"
+		app:print_iconSize="20dp"
+		app:print_iconText="@string/ic_cursor"/>
+
+	<Button
+		android:id="@+id/parenthesis_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Parenthesis"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="( )"
+		android:textColor="@color/fileText" />
+
+	<Button
+		android:id="@+id/brackets_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Brackets"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="{ }"
+		android:textColor="@color/fileText" />
+
+	<Button
+		android:id="@+id/less_greater_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Less greater"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="&lt; &gt;"
+		android:textColor="@color/fileText" />
+
+	<Button
+		android:id="@+id/dash_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Dash"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="-"
+		android:textColor="@color/fileText" />
+
+	<Button
+		android:id="@+id/slash_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="?android:attr/selectableItemBackground"
+		android:contentDescription="Slash"
+		android:gravity="center"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:text="/"
+		android:textColor="@color/fileText" />
+
+	<ImageButton
+		android:id="@+id/console_btn"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="30dp"
+		android:background="?android:attr/selectableItemBackground"
+		android:layout_gravity="center_vertical|right"
+		android:contentDescription="Console"
+		android:minWidth="30dp"
+		android:minHeight="40dp"
+		android:padding="10dp"
+		android:src="@drawable/console" />
+</com.webdefault.corks.editor.tool.KeyboardTool>

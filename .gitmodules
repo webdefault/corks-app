@@ -1,0 +1,3 @@
+[submodule "app/src/main/assets/syntax"]
+	path = app/src/main/assets/syntax
+	url = https://github.com/webdefault/corks-syntaxes.git

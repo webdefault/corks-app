@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/toolbar_actionbar"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:background="@color/console_background">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/nav_open_terms"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:theme="@style/AppTheme.AppBarOverlay"
+			tools:listitem="@layout/open_file_listitem">
+		</android.support.v7.widget.RecyclerView>
+	</android.support.design.widget.AppBarLayout>
+
+	<com.offsec.nhterm.TermViewFlipper
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/view_flipper"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="@android:color/black"/>
+	
+	<com.webdefault.corks.term.TermTool
+		android:id="@+id/console_tool"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#1c2222"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/esc_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Escape"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="Esc"
+			android:textColor="@color/fileText"/>
+
+		<Button
+			android:id="@+id/control_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Ctrl"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="Ctrl"
+			android:textColor="@drawable/textcolor_btn"/>
+
+		<Button
+			android:id="@+id/alt_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Alt"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="Alt"
+			android:textColor="@drawable/textcolor_btn"/>
+
+		<Button
+			android:id="@+id/tab_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Tab"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="Tab"
+			android:textColor="@color/fileText"/>
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/cursor_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Save with encoding"
+			android:drawablePadding="15dp"
+			android:gravity="left|center_vertical"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			app:print_iconColor="@drawable/textcolor_btn"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="20dp"
+			app:print_iconText="@string/ic_cursor"/>
+
+		<Button
+			android:id="@+id/vertical_bar_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Vertical bar"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="|"
+			android:textColor="@color/fileText"/>
+
+		<Button
+			android:id="@+id/dash_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Dash"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="-"
+			android:textColor="@color/fileText"/>
+
+		<Button
+			android:id="@+id/slash_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Slash"
+			android:gravity="center"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			android:text="/"
+			android:textColor="@color/fileText"/>
+
+		<com.github.johnkil.print.PrintImageButton
+			android:id="@+id/text_edit_btn"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical|right"
+			android:layout_weight="1"
+			android:background="?android:attr/selectableItemBackground"
+			android:contentDescription="Console"
+			android:minHeight="40dp"
+			android:minWidth="30dp"
+			android:padding="10dp"
+			app:print_iconColor="@drawable/textcolor_btn"
+			app:print_iconFont="fonts/material-icon-font.ttf"
+			app:print_iconSize="20dp"
+			app:print_iconText="@string/ic_edit"/>
+	</com.webdefault.corks.term.TermTool>
+</LinearLayout>

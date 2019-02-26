@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    implementation 'com.android.support:support-annotations:26.1.0'
+}
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion project.ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}

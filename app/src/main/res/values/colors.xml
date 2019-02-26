@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="console_background">#1c2222</color>
+	<color name="term_selected">#333e3e</color>
+	<color name="term_pressed">#374848</color>
+	<color name="new_file_selected">#2c3b3b</color>
+	<color name="new_file_pressed">#425858</color>
+	
+	<color name="toolbarBackground">#202020</color>
+	<color name="drawerBackground">#1a1a1a</color>
+	<color name="drawerText">#666</color>
+	<color name="drawerFile">#666</color>
+	<color name="colorPrimary">#353535</color>
+	<color name="colorPrimaryDark">#0a0a0a</color>
+	<color name="colorAccent">#88cccc</color>
+	<color name="dialogHint">#bbb</color>
+
+	<color name="backgroundApp">#222</color>
+	<color name="fileSelected">#666</color>
+	<color name="filePressed">#555</color>
+
+	<color name="newFileSelected">#2c3b3b</color>
+	<color name="newFilePressed">#425858</color>
+	
+	<color name="fileText">#ccc</color>
+
+
+	<color name="editorHighlightFill">#2c3b3b</color>
+	<color name="editorHighlightStroke">#425858</color>
+	<color name="editorDefaultText">#ccc</color>
+	<color name="editorDefaultLineMark">#333</color>
+
+	<color name="toolsBackground">#333</color>
+	<color name="toolBackground">#555</color>
+
+	<color name="hintColor">#999</color>
+
+	<color name="syntaxSelector">#659696</color>
+
+	<color name="syntax_keyword">#f07178</color>
+	<color name="syntax_primitive">#c792ea</color>
+	<color name="syntax_string">#c3e88d</color>
+	<color name="syntax_number">#ff5370</color>
+	<color name="syntax_comment">#4a4a4a</color>
+	<color name="syntax_char">#81d4a9</color>
+	<color name="syntax_identifier">#e8bf6a</color>
+</resources>

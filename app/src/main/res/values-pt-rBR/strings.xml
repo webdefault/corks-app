@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Corks Editor</string>
+    <string name="action_file_untitled">Sem título</string>
+    <string name="term_fragment_new_session">Nova sessão de terminal</string>
+    <string name="term_fragment_cancel">Cancelar</string>
+    <string name="term_fragment_ubuntu_not_detected">Ubuntu não detectado</string>
+    <string name="term_fragment_ubuntu_not_detected_info">Parece que você não tem o Ubuntu instalado aqui (./dist/ubuntu-start.sh not found). Você gostaria de executar o comando para instala-lo? curl https://webdefault.com.br/install-proot-and-ubuntu.sh | sh</string>
+    <string name="term_fragment_yes">Sim</string>
+    <string name="term_fragment_no">Não</string>
+    <string name="term_fragment_legal">Informações legais</string>
+    <string name="term_fragment_legal_info">O Ubuntu e todos seus aplicativos incluidos possuem suas próprias licenças. https://www.ubuntu.com/licensing  PRoot e todas suas bibliotecas possuem suas próprias licenças e são baseados no https://github.com/orlleite/termux-packages.</string>
+    <string name="term_fragment_yes_accept">Sim, eu aceito</string>
+    <string name="term_fragment_no_su_binary">O binário SU não foi encontrado. Não existe root.</string>
+    <string name="action_open_folder">Abrir pasta</string>
+    <string name="action_open_file">Abrir arquivo</string>
+    <string name="action_refresh_syntax">Atualizar sintaxe</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_about">Sobre</string>
+    <string name="window_title">Sessão %1$d</string>
+    <string name="action_tool_save">Salvar</string>
+    <string name="action_tool_find">Encontrar</string>
+    <string name="action_tool_undo">Desfazer</string>
+    <string name="action_tool_remove_ads">Remover propagandas</string>
+    <string name="action_tool_syntax_info">Informações da sintaxe</string>
+    <string name="action_info_filesize">Tamanho</string>
+    <string name="action_info_encoding">codificação</string>
+    <string name="action_info_edited_at">Editado em</string>
+    <string name="dialog_find_tool_using_regex">Usar regex</string>
+    <string name="save_tool_save_as">Salvar como</string>
+    <string name="save_tool_save_with_encoding">Salvar com codificação</string>
+    <string name="undo_tool_undo">Desfazer</string>
+    <string name="undo_tool_redo">Refazer</string>
+</resources>

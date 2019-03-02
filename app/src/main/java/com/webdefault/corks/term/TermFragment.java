@@ -964,7 +964,7 @@ public class TermFragment extends Fragment implements UpdateCallback
         final TermSettings settings = mSettings;
 
         AlertDialog.Builder builderSingle = new AlertDialog.Builder( getContext() );
-        builderSingle.setTitle( "New terminal session" );
+        builderSingle.setTitle( R.string.term_fragment_new_session );
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>( getContext(), R.layout.dialog_listitem );
 
@@ -972,7 +972,7 @@ public class TermFragment extends Fragment implements UpdateCallback
         arrayAdapter.add( "Android Su" );
         arrayAdapter.add( "PRoot Ubuntu" );
 
-        builderSingle.setNegativeButton( "cancel", new DialogInterface.OnClickListener()
+        builderSingle.setNegativeButton( R.string.term_fragment_cancel, new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick( DialogInterface dialog, int which )
@@ -1077,7 +1077,11 @@ public class TermFragment extends Fragment implements UpdateCallback
                         }
                         else
                         {
-                            Dialogs.question( getContext(), "Ubuntu not detected", "It looks like you don't have ubuntu installed here (./dist/ubuntu-start.sh not found). Do you want run a command to install it?\n\ncurl https://webdefault.com.br/install-proot-and-ubuntu.sh | sh", "Yes", "No", new DialogInterface.OnClickListener() {
+                            Dialogs.question( getContext(),
+                                    getString(R.string.term_fragment_ubuntu_not_detected),
+                                    getString(R.string.term_fragment_ubuntu_not_detected_info),
+                                    getString(R.string.term_fragment_yes),
+                                    getString(R.string.term_fragment_no), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick( DialogInterface dialogInterface, int i )
                                 {
@@ -1097,7 +1101,12 @@ public class TermFragment extends Fragment implements UpdateCallback
 
     private void installUbuntu( final int from )
     {
-        Dialogs.question( getContext(), "Legal", "Ubuntu and all embedded apps included with it have their own licenses.\nhttps://www.ubuntu.com/licensing\n\nPRoot and other included libraries have their own licenses and are based on\nhttps://github.com/orlleite/termux-packages.", "Yes, I accepted it", "Cancel", new DialogInterface.OnClickListener() {
+        Dialogs.question( getContext(),
+                getString( R.string.term_fragment_legal ),
+                getString( R.string.term_fragment_legal_info ),
+                getString( R.string.term_fragment_yes_accept ),
+                getString( R.string.term_fragment_cancel ),
+                new DialogInterface.OnClickListener() {
             @Override
             public void onClick( DialogInterface dialogInterface, int i )
             {
@@ -1131,11 +1140,11 @@ public class TermFragment extends Fragment implements UpdateCallback
     private void show_nosupersu()
     {
         AlertDialog.Builder builder1 = new AlertDialog.Builder( getActivity() );
-        builder1.setMessage( "No SU binary found!  Missing root!" );
+        builder1.setMessage( R.string.term_fragment_no_su_binary );
         builder1.setCancelable( true );
 
         builder1.setPositiveButton(
-                "Ok",
+                R.string.ok,
                 new DialogInterface.OnClickListener()
                 {
                     public void onClick( DialogInterface dialog, int id )
@@ -1174,19 +1183,16 @@ public class TermFragment extends Fragment implements UpdateCallback
         SessionList sessions = mTermSessions;
         if( sessions == null )
         {
-            Log.d( "onupdateeeeee", "sessions == null" );
             return;
         }
 
         if( sessions.size() == 0 )
         {
-            Log.d( "onupdateeeeee", "tamano 0" );
             mStopServiceOnFinish = true;
             // finish();
         }
         else if( sessions.size() < mViewFlipper.getChildCount() )
         {
-            Log.d( "onupdateeeeee", sessions.size() + "sessions en el if " + mViewFlipper.getChildCount() );
             for( int i = 0; i < mViewFlipper.getChildCount(); ++i )
             {
                 EmulatorView v = (EmulatorView) mViewFlipper.getChildAt( i );

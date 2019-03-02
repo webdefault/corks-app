@@ -7,6 +7,7 @@ import android.text.Selection;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 
+import com.webdefault.corks.R;
 import com.webdefault.corks.editor.highlight.Highlighter;
 import com.webdefault.corks.editor.highlight.Syntax;
 import com.webdefault.lib.Utils;
@@ -330,7 +331,7 @@ class EditingTextFile extends EditingFile
         {
             lastModDate = "---";
             size = 0;
-            name = "Untitled";
+            name = context.getResources().getString( R.string.action_file_untitled );
         }
         else
         {
@@ -339,7 +340,11 @@ class EditingTextFile extends EditingFile
             name = file.getName();
         }
         
-        return name + "\nFilesize: " + Utils.shortFileSize( size ) + "\nEncoding: " + charset + "\nEdited at: " + lastModDate;
+        return	name + "\n" + context.getResources().getString( R.string.action_info_filesize ) + ": " +
+                Utils.shortFileSize( size ) + "\n" +
+                context.getResources().getString( R.string.action_info_encoding ) + ": " +
+                charset + "\n" + context.getResources().getString( R.string.action_info_edited_at ) + ": " +
+                lastModDate;
     }
     
     public void save()

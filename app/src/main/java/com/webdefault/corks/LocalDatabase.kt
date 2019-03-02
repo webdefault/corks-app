@@ -519,7 +519,8 @@ class LocalDatabase private constructor(private val context:Context)
             
             do
             {
-                name = if(newCount == 0) "Untitled" else "Untitled $newCount"
+                var untitled:String = context.getString( R.string.action_file_untitled );
+                name = if(newCount == 0) untitled else "$untitled $newCount"
                 lines = db.executeQuery("SELECT id FROM 'open_files' WHERE path = ?", arrayOf(name))
                 
                 newCount++

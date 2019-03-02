@@ -16,7 +16,7 @@
 		android:paddingEnd="7dip"
 		android:paddingStart="12dip"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="Match case"
+		android:text="@string/dialog_find_tool_match_case"
 		android:theme="@style/DialogAlertContent"
 		/>
 
@@ -30,7 +30,7 @@
 		android:paddingEnd="7dip"
 		android:paddingStart="12dip"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="Using regex"
+		android:text="@string/dialog_find_tool_using_regex"
 		android:theme="@style/DialogAlertContent"
 		/>
 
@@ -44,7 +44,7 @@
 		android:paddingEnd="7dip"
 		android:paddingStart="12dip"
 		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:text="Replace"
+		android:text="@string/dialog_find_tool_using_replace"
 		android:theme="@style/DialogAlertContent"
 		/>
 </LinearLayout>
